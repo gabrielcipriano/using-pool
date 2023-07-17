@@ -14,7 +14,10 @@
     "object",
     "pool",
     "using",
-    "object-pool"
+    "object pool",
+    "typescript",
+    "gc",
+    "garbage collector"
   ],
   "author": "Gabriel F. Cipriano",
   "license": "SEE LICENSE IN LICENSE",
@@ -23,9 +26,11 @@
   },
   "homepage": "https://github.com/gabrielcipriano/using-pool#readme",
   "devDependencies": {
+    "@types/node": "^20.4.2",
+    "ts-node": "^10.9.1",
     "typescript": "^5.2.0-beta"
   },
   "engines": {
     "node": ">=14.0.0"
-  },
+  }
 }
