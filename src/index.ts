@@ -40,4 +40,10 @@ export class Pool<T extends object = {}> {
 
         return obj;
     }
+
+    recycle(obj: T & Disposable): void {
+        if (this.objs.length < this.maxSize) {
+            this.objs[this.objs.length] = obj;
+        }
+    }
 }
