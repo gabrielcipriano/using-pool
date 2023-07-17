@@ -8,7 +8,7 @@ Example:
 ```typescript
 import { Pool } from 'using-pool'
 
-const userPool = new Pool(() => ({/** a object factory */}))
+const userPool = new Pool(() => ({/** an object factory */}))
 
 function doSomething() {
     using user = userPool.get()
