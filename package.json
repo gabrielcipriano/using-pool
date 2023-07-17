@@ -1,0 +1,31 @@
+{
+  "name": "using-pool",
+  "version": "1.0.0",
+  "description": "An object pool library using modern Typescript for auto-recycling",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielcipriano/using-pool.git"
+  },
+  "keywords": [
+    "object",
+    "pool",
+    "using",
+    "object-pool"
+  ],
+  "author": "Gabriel F. Cipriano",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/gabrielcipriano/using-pool/issues"
+  },
+  "homepage": "https://github.com/gabrielcipriano/using-pool#readme",
+  "devDependencies": {
+    "typescript": "^5.2.0-beta"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+}
