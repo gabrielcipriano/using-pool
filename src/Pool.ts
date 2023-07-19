@@ -1,5 +1,11 @@
+// polifill for Symbol.dispose
+declare global {
+    interface SymbolConstructor {
+        readonly dispose: unique symbol;
+    }
+}
 
-// @ts-ignore
+// @ts-ignore - this is a polyfill
 Symbol.dispose = Symbol.dispose ?? Symbol("Symbol.dispose");
 
 export class Pool<T extends object = {}> {
@@ -29,7 +35,7 @@ export class Pool<T extends object = {}> {
         
         Object.defineProperty(obj, Symbol.dispose, { 
             value: () => {
-                originalDispose?.();
+                originalDispose?.apply(obj);
 
                 if (this.objs.length < this.maxSize) {
                     this.objs[this.objs.length] = obj;
