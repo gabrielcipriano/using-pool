@@ -35,11 +35,10 @@ export class Pool<T extends object = {}> {
         
         Object.defineProperty(obj, Symbol.dispose, { 
             value: () => {
-                originalDispose?.apply(obj);
-
                 if (this.objs.length < this.maxSize) {
                     this.objs[this.objs.length] = obj;
                 }
+                originalDispose?.apply(obj);
             },
             enumerable: false
         });
