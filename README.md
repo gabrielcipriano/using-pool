@@ -20,7 +20,16 @@ function doSomething() {
 
 ```
 
-## pre requisites
+## Installation
+```bash
+npm install using-pool
+```	
+or
+```bash
+yarn add using-pool
+```
+
+### pre requisites
 - node version: `14` or later
 - typescript version: `5.2.0-beta` or later
 
