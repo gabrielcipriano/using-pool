@@ -24,7 +24,7 @@
     "garbage collector"
   ],
   "author": "Gabriel F. Cipriano",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "GNU GPLv3",
   "bugs": {
     "url": "https://github.com/gabrielcipriano/using-pool/issues"
   },
