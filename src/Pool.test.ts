@@ -71,4 +71,22 @@ aPool('should be limited to a max size', () => {
     assert.is(wm.has(otherObj), false);
 });
 
+aPool('should be able to recycle objects manually', () => {
+    const pool = new Pool(() => ({}));
+    const wm = new WeakMap();
+
+    if (true) {
+        const obj = pool.get(); // notice we don't use the 'using' keyword here
+
+        wm.set(obj, 1);
+
+        pool.recycle(obj);
+    }
+
+    using obj = pool.get();
+
+    assert.is(wm.get(obj), 1);
+})
+
+
 aPool.run();
