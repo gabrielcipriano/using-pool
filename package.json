@@ -5,7 +5,10 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "uvu -r ts-node/register src",
-    "build": "tsc"
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "upversion": "changeset",
+    "upversion:commit": "changeset version",
+    "release": "npm run build && changeset publish --verbose"
   },
   "repository": {
     "type": "git",
@@ -27,8 +30,10 @@
   },
   "homepage": "https://github.com/gabrielcipriano/using-pool#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@types/node": "^20.4.2",
     "ts-node": "^10.9.1",
+    "tsup": "^7.1.0",
     "typescript": "^5.2.0-beta",
     "uvu": "^0.5.6"
   },
